@@ -1,0 +1,2 @@
+E:\MyProject\LuaPraser\LuaPraser\bin\Debug\LuaPraser.exe.config
+E:\MyProject\LuaTypePraser\LuaPraser\bin\Debug\LuaPraser.exe.config
