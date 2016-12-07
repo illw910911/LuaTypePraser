@@ -1,27 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LuaPraser.WjsTokenPraser;
 
-namespace LuaPraser.WjsTokenPraser.Terminals
+namespace LuaPraser.WjsTokenParser.Terminals
 {
     public class EOFTerminal :Terminal
     {
         public EOFTerminal()
         {
             m_matchSymbol = "\0";
-            m_name = LuaTerminalNames.e
+            m_name = LuaTerminalNames.Equal;
         }
 
         public override bool Match(SourceTextStream pSourceTextStream)
         {
-            reg
+            return false;
         }
 
         public override Token CutOffToken(SourceTextStream pSourceTextStream)
         {
-            
+            Token l_token = new Token();
+            return l_token;
         }
     }
 }

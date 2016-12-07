@@ -1,2 +1,8 @@
 E:\MyProject\LuaPraser\LuaPraser\bin\Debug\LuaPraser.exe.config
 E:\MyProject\LuaTypePraser\LuaPraser\bin\Debug\LuaPraser.exe.config
+E:\Git\Projects\LuaTypePraser\LuaTypePraser\LuaPraser\bin\Debug\LuaPraser.exe.config
+E:\Git\Projects\LuaTypePraser\LuaTypePraser\LuaPraser\bin\Debug\LuaPraser.exe
+E:\Git\Projects\LuaTypePraser\LuaTypePraser\LuaPraser\bin\Debug\LuaPraser.pdb
+E:\Git\Projects\LuaTypePraser\LuaTypePraser\LuaPraser\obj\Debug\LuaPraser.csprojResolveAssemblyReference.cache
+E:\Git\Projects\LuaTypePraser\LuaTypePraser\LuaPraser\obj\Debug\LuaPraser.exe
+E:\Git\Projects\LuaTypePraser\LuaTypePraser\LuaPraser\obj\Debug\LuaPraser.pdb
