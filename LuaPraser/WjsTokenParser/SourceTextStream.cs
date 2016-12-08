@@ -12,6 +12,8 @@ namespace LuaPraser.WjsTokenPraser
 
         private string m_sourceText = "";
 
+        private int m_markPos = -1;
+
         public SourceTextStream(string pText)
         {
             m_sourceText = pText;
@@ -28,14 +30,42 @@ namespace LuaPraser.WjsTokenPraser
         /// <returns></returns>
         public char Next()
         {
-           
+            m_curPos++;
             if (m_sourceText.Length > m_curPos)
             {
                 char l_c = m_sourceText[m_curPos];
-                m_curPos++;
                 return l_c;
             }
             return '\0';
+        }
+
+        public void MarkPos()
+        {
+            m_markPos = m_curPos;
+        }
+
+        public void RevertPos()
+        {
+            if (m_markPos >= 0)
+            {
+                m_curPos = m_markPos;
+                m_markPos = 0;
+            }
+        }
+
+        public char PrevNextChar()
+        {
+            if (m_sourceText.Length > m_curPos + 1)
+            {
+                char l_c = m_sourceText[m_curPos + 1];
+                return l_c;
+            }
+            return '\0';
+        }
+
+        public void Back()
+        {
+            m_curPos --;
         }
 
         public char Cur()

@@ -43,7 +43,8 @@ namespace LuaPraser.WjsTokenParser
                 for (int i = 0; i < m_terminals.Count; i++)
                 {
                     Terminal l_terminal = m_terminals[i];
-                    
+                    //标记读取位置，如果匹配成功,则无视这个位置
+                    pSourceTextStream.MarkPos();
                     if (l_terminal.Match(pSourceTextStream))
                     {
                         l_token = l_terminal.CutOffToken(pSourceTextStream);
@@ -55,6 +56,8 @@ namespace LuaPraser.WjsTokenParser
                         l_tokens.Add(l_token);
                         break;
                     }
+                    //如果匹配失败，则退回到标记位置
+                    pSourceTextStream.RevertPos();
                 }
                 if (l_token == null)
                 {

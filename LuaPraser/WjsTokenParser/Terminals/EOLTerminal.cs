@@ -19,7 +19,7 @@ namespace LuaPraser.WjsTokenParser.Terminals
             Token l_token;
             char l_char = pSourceTextStream.Cur();
             StringBuilder l_builder = new StringBuilder();
-            while (!CharMatch(l_char))
+            while (!CharMatch(l_char)&&l_char!='\0')
             {
                 l_builder.Append(l_char);
                 l_char = pSourceTextStream.Next();
@@ -37,7 +37,7 @@ namespace LuaPraser.WjsTokenParser.Terminals
 
         private bool CharMatch(char pChar)
         {
-            return pChar == '\r' || pChar == '\n' || pChar == '\0';
+            return pChar == '\r' || pChar == '\n';
         }
     }
 }
